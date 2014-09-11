@@ -4,29 +4,35 @@
         <meta charset="UTF-8">
         <title>{% block title %}{{titrePage|default('TripMinute')}}{% endblock %}</title>
         <link rel="stylesheet" href="{{asset('bundles/tripminuteaccueil/css/bootstrap.css')}}">
-{#        <link rel="stylesheet" href="{{asset('bundles/nextjobs/js/select2-3.5.1/select2.css')}}">#}
+        {#        <link rel="stylesheet" href="{{asset('bundles/nextjobs/js/select2-3.5.1/select2.css')}}">#}
         <link rel="stylesheet" href="{{asset('bundles/tripminuteaccueil/js/select2-3.5.1/select2-bootstrap.css')}}">
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% include 'TripminuteAccueilBundle::menu.html.twig' %}
-        <div class="container">
-            
-        {% for message in app.session.flashbag.get("success") %}
-        <div class="alert alert-success">
-            <button data-dismiss="alert" class="close" type="button">
-                <span aria-hidden="true">x</span>
-                <span class="sr-only">Close</span>
-            </button>
-            {{message}}
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+                {% include 'TripminuteAccueilBundle::menu.html.twig' %}
+                <div class="container">
+
+                    {% for message in app.session.flashbag.get("success") %}
+                        <div class="alert alert-success">
+                            <button data-dismiss="alert" class="close" type="button">
+                                <span aria-hidden="true">x</span>
+                                <span class="sr-only">Close</span>
+                            </button>
+                            {{message}}
+                        </div>
+                    {% endfor %}
+                    
+                    {% block body %} {% endblock %}
+                </div>
         </div>
-        {% endfor %}
-            
-            {% block contenu %} {% endblock %}
-        </div>
-        <script src="{{asset('bundles/tripminuteaccueil/js/jquery-1.11.1.js')}}"></script>
-        <script src="{{asset('bundles/tripminuteaccueil/js/bootstrap.js')}}"></script>
-        {% block javascripts %}{% endblock %}
-    </body>
+        <div class="col-lg-2"></div>
+    </div>
+    <script src="{{asset('bundles/tripminuteaccueil/js/jquery-1.11.1.js')}}"></script>
+    <script src="{{asset('bundles/tripminuteaccueil/js/bootstrap.js')}}"></script>
+{% block javascripts %}{% endblock %}
+</body>
 </html>
