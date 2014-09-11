@@ -1,0 +1,4 @@
+tripminute_accueil:
+    resource: "@TripminuteAccueilBundle/Resources/config/routing.yml"
+    prefix:   /
+

@@ -1,0 +1,3 @@
+tripminute_accueil_homepage:
+    path:     /
+    defaults: { _controller: TripminuteAccueilBundle:Default:index }
