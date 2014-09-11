@@ -6,7 +6,7 @@
 {% block body %}
     <div class="row">
         <div class="col-lg-4"><span class="glyphicon glyphicon-globe"></span> Concept du site<br>
-            <span>
+            <span >
                 TripMinute est un site communautaire et participatif qui propose aux voyageurs des fiches de voyage prête à l'emploi.
             </span>
         </div>
@@ -35,4 +35,112 @@
         <div class="col-lg-4">
             Connexion
         </div>
-    {% endblock %}
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4">
+
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Dernière fiches</div>
+
+                <!-- Table -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Titre</th>
+                            <th>Auteur</th>
+                            <th>Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>Londres</td>
+                            <td>Hugues</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Congo</td>
+                            <td>Kevin</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Vietnam</td>
+                            <td>Catherine</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>USA</td>
+                            <td>Fuala</td>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        
+{#        <div class="col-lg-1"></div>#}
+        <div class="col-lg-4">
+        <div class="col-lg-2"></div>  
+            
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Les mieux notées</div>
+
+                <!-- Table -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Titre</th>
+                            <th>Auteur</th>
+                            <th>Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>Londres</td>
+                            <td>Hugues</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Congo</td>
+                            <td>Kevin</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Vietnam</td>
+                            <td>Catherine</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>USA</td>
+                            <td>Fuala</td>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        
+        <div class="col-lg-2">
+            <span class="label label-primary">Primary</span>
+            <span class="label label-success">Success</span>
+            <span class="label label-info">Info</span>
+            <span class="label label-warning">Warning</span>
+            <span class="label label-danger">Danger</span>
+        </div>
+    </div>
+
+{% endblock %}

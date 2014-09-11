@@ -13,26 +13,32 @@
     <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
-                {% include 'TripminuteAccueilBundle::menu.html.twig' %}
-                <div class="container">
+            {% include 'TripminuteAccueilBundle::menu.html.twig' %}
+            <div class="container">
 
-                    {% for message in app.session.flashbag.get("success") %}
-                        <div class="alert alert-success">
-                            <button data-dismiss="alert" class="close" type="button">
-                                <span aria-hidden="true">x</span>
-                                <span class="sr-only">Close</span>
-                            </button>
-                            {{message}}
-                        </div>
-                    {% endfor %}
-                    
-                    {% block body %} {% endblock %}
+                {% for message in app.session.flashbag.get("success") %}
+                    <div class="alert alert-success">
+                        <button data-dismiss="alert" class="close" type="button">
+                            <span aria-hidden="true">x</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        {{message}}
+                    </div>
+                {% endfor %}
+
+                {% block body %} {% endblock %}
+            </div>
+
+            <div class="footer">
+                <div class="container">
+                    <p class="text-muted">CB & MPK</p>
                 </div>
+            </div>
+
+            <div class="col-lg-2"></div>
         </div>
-        <div class="col-lg-2"></div>
-    </div>
-    <script src="{{asset('bundles/tripminuteaccueil/js/jquery-1.11.1.js')}}"></script>
-    <script src="{{asset('bundles/tripminuteaccueil/js/bootstrap.js')}}"></script>
-{% block javascripts %}{% endblock %}
+        <script src="{{asset('bundles/tripminuteaccueil/js/jquery-1.11.1.js')}}"></script>
+        <script src="{{asset('bundles/tripminuteaccueil/js/bootstrap.js')}}"></script>
+    {% block javascripts %}{% endblock %}
 </body>
 </html>
